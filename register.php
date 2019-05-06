@@ -26,6 +26,6 @@
 $data = join(SEPARATOR, [$username, $email, $name, sha1($senha),$date,$telefone]) . "\n";
 $handle = fopen(USERS_FILE, 'a');
 fwrite($handle, $data);
-redirect('reg_login.php?mes_reg=Usuário registrado');
+redirect('reg_login.php?mes_reg=Usuário cadastrado com sucesso');
 
 ?>

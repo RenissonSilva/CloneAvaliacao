@@ -14,7 +14,9 @@
     <h1>Mural</h1>
     <form action="auth.php" method="POST">
         <fieldset>
-            <span class="msg">Login ou senha incorreto</span>
+            <?php if ($_GET['mes_log'] ?? false): ?>
+                <span class="msg"><?= $_GET['mes_log'] ?></span>
+            <?php endif ?>
             <legend>Login</legend>
             <input type="text" name="username" placeholder="Nome de usuário" value="">
             <input type="password" name="senha" placeholder="Senha">
@@ -24,7 +26,9 @@
     <hr>
     <form action="register.php" method="POST">
         <fieldset>
-            <span class="msg">Usuário cadastrado com sucesso</span>
+            <?php if ($_GET['mes_reg'] ?? false): ?>
+                <span class="msg"><?= $_GET['mes_reg'] ?></span>
+            <?php endif ?>
             <legend>Registro</legend>
             <input type="text" placeholder="Nome de usuário" name="username" value="">
             <input type="email" placeholder="E-mail" name="email" value="">

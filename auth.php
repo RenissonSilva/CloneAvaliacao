@@ -8,5 +8,5 @@ include 'init.php';
 if(login($username, $senha)) {
     redirect('index-logado.php');
 }
-redirect('reg_login.php?mes_log=Email ou senha incorreto');
+redirect('reg_login.php?mes_log=Login ou senha incorreto');
 ?>

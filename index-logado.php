@@ -21,7 +21,7 @@
         </ul>
     </nav>
         <?php 
-            print_r(get_categories());
+            print_r($message_info['id']);
         ?>
 
     <h1>Mural</h1>
@@ -43,6 +43,12 @@
         </fieldset>
     </form>
 
+    <?php foreach ($data as $id => $info): ?>
+        <?= $info['id'] ?>
+        <?= $info['user'] ?>
+        <?= $info['category'] ?>
+        <?= $info['message'] ?>
+    <?php endforeach ?>
 
     <div class="message">
         <div class="category category-0">Aviso</div>
@@ -56,7 +62,7 @@
     </div>
 
     <div class="message from-user">
-        <div class="category category-1">Pergunta <a href="removeMessage.php?id=16" class="del" title="Remover mensagem">&times;</a></div>
+        <div class="category category-1">Pergunta <a href="removeMessage.php?id=0" class="del" title="Remover mensagem">&times;</a></div>
         <div class="message-text">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa praesentium, rerum fugiat magnam ratione doloremque enim numquam aspernatur exercitationem ut dolore earum dolorem, id voluptas et eveniet ea, accusantium repudiandae?
         </div>

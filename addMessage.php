@@ -7,14 +7,14 @@ if (!is_logged()) {
 }	
 
 $userId = $_POST['user'];
-$categoryId = $_POST['category'];
+$categoryId = $_POST[get_categories(category_info($category['id']))];
 $message = $_POST['message'];
 
 
 $handle = fopen(MESSAGES_FILE, 'a');
 fwrite(
     $handle,
-    join([$userId, $categoryId, $message,"\n"])
+    join(SEPARATOR, [$userId, $categoryId, $message,"\n"])
 );
 fclose($handle);
 
